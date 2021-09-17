@@ -23,6 +23,8 @@ bot.on('message', message => {
             if(!args.length) return message.channel.send("Mohon berikan nama untuk di set")
                 const nick = "[WARGA]" + args.join(" ")
             if(nick.length > 32) return message.channel.send("Nickname terlalu panjang, mohon berikan yang lebih singkat")
+             if (message.channel.id !== "857257140888797204")
+                return message.channel.send("**You Can't Register Here!**,Gak Bisa Basa Inggris? Nih Gua Terjemahin `(kamu tidak bisa register disini)` Mrp Team Bot");
             try {
                     message.member.roles.add("") //Role Yang Mau DiSet
                     message.member.setNickname(nick)
