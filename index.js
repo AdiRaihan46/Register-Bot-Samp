@@ -4,10 +4,10 @@ const token = ""; // TOKEN BOT KAMU
 var PREFIX = "!"; // PREFIX BOT KAMU
 
 bot.on('ready', () => {
-    console.log('Bot Sudah Online, Subscribe Yt Rama Putra')
+    console.log('Bot Sudah Online!')
 
-    bot.user.setActivity("Register Bot By Rama Putra", { 
-        type: "PLAYING"
+    bot.user.setActivity("Bot By AdiRaihan46", { 
+        type: "WATCHING"
     }).catch(console.error);
 });
 
