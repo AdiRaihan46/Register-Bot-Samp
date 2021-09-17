@@ -1,0 +1,14 @@
+Bot Register By Rama Putra
+
+Cara Instalasi :
+- Buka WorkSpace index.js .
+- Isi Bot Token Dengan Bot Tokenmu Sendiri .
+- Isi ID Role Yang Mau Kamu Set DiDiscord .
+- Setelah Itu Buka Terminal Baru .
+- Ketikkan "node ." .
+- Bot Berhasil DiJalankan .
+
+Jika Ada Masalah Bisa Bertanya DiServer Discord Official Rama Putra https://discord.gg/9kzata6jpR
+
+1. Jangan Lupa Subscribe Channel YouTube Rama Putra
+2. Jangan DiJual!!!
