@@ -16,21 +16,29 @@ bot.on('message', message => {
     if(!message.content.startsWith(PREFIX)) return;
     switch (args[0]) {
 
-    case 'register':
+    if (message.author.bot) return false;
 
-            if(message.channel.type == "dm") return message.channel.send("Kamu tidak bisa registrasi dari DM")
+    if (message.content.includes("@here") || message.content.includes("@everyone")) return false;
+
+    if (message.mentions.has(bot.user.id)) {
+        message.channel.send(`\nMy prefix for \`${message.guild.name}\` is \`${prefix}\` Type \`${prefix}help\` for help`);
+    };
+
+    case 'r':
+
+            if(message.channel.type == "dm") return message.channel.send("**Tolong Registrasi Di Channel Yang Sudah Disediakan!**")
                 const shifter = args.shift()
-            if(!args.length) return message.channel.send("Mohon berikan nama untuk di set")
+            if(!args.length) return message.channel.send("*Mohon Berikan Nama Yang Lengkap Untuk Di Set!**")
                 const nick = "[WARGA]" + args.join(" ")
-            if(nick.length > 32) return message.channel.send("Nickname terlalu panjang, mohon berikan yang lebih singkat")
-             if (message.channel.id !== "857257140888797204")
-                return message.channel.send("**You Can't Register Here!**,Gak Bisa Basa Inggris? Nih Gua Terjemahin `(kamu tidak bisa register disini)` Mrp Team Bot");
+            if(nick.length > 32) return message.channel.send("**Nickname Kamu Terlalu Panjang ,Tolong Dibenarkan Kembali!**")
+             if (message.channel.id !== "857257140888797204") //id channel
+                return message.channel.send("**Maaf Kamu Tidak Bisa Registrasi Disini ,Mohon Registrasi Ditempat Yang Disediakan!**");
             try {
                     message.member.roles.add("") //Role Yang Mau DiSet
                     message.member.setNickname(nick)
-                    return message.reply("Accept Jangan Lupa Subscribe Channel **Rama Putra**");
+                    return message.reply("**✅Accept! ,Terimakasih Telah Registrasi**");
                 } catch(e) {
-                    return message.channel.send("Ada sebuah kesalahan disaat melaksanakan command.")
+                    return message.channel.send("**Ada Sesuatu Command Yang Eror Mohon Hubungi Pengurus Yang Online!**")
                             }
             break;
     }
